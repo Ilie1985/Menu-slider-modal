@@ -152,13 +152,13 @@ button:focus {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 30%;
+  left: 35%;
   transform: translate (-50%, -50%);
   max-width: 100%;
   width: 400px;
   animation-name: modalopen;
-  animation-duration: var(--modal-duration); 
+  animation-duration: var(--modal-duration);
 }
 
 .modal-header {
@@ -198,7 +198,7 @@ button:focus {
   right: 0;
 }
 
-  @keyframes modalopen {
+@keyframes modalopen {
   /* goes from invisible (0) to fully visible(1) slowly,in 1 sec */
   from {
     opacity: 0;
@@ -207,4 +207,4 @@ button:focus {
   to {
     opacity: 1;
   }
-}  
+}
