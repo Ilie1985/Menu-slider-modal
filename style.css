@@ -61,6 +61,123 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
 }
-nav ul li a:hover{
+nav ul li a:hover {
   text-decoration: underline;
+}
+
+header {
+  /* position the header relative because we`re going to have a toggle class button inside of it (header) and the button needs to be positioned absolute ,it has to have a relative container*/
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 130%;
+  position: relative;
+  padding: 40px 15px;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 30px, 0;
+}
+
+button,
+input[type="submit"] {
+  background-color: var(--secondary-color);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+button:focus {
+  /* to remove the default  focus outline when  we hower */
+  outline: none;
+}
+
+.toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
+
+.cta-btn {
+  /* cta stands for call-to-action */
+  padding: 12px 30px;
+  font-size: 20px;
+}
+
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+/* MODAL */
+
+.modal-container {
+  /* set the modal to cover the entire page */
+  /* set it to display none in order to not have it until we invoke it */
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal {
+  /* to put the modal class div in the center of the page I use everything from the position:absolute to transform:translate(x-50%, y-50%) */
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+}
+
+.modal-header {
+  background: var(--primary-color);
+  padding: 15px;
+  color: #fff;
+}
+
+.modal-header h3 {
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-form div {
+  margin: 15px 0;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 6px;
+  right: 0;
 }
