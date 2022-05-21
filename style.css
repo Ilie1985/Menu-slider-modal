@@ -14,8 +14,15 @@
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
+  /* for the transition to be smooth we use the bellow */
+  transition: transform 0.3s ease;
 }
 
+body.show-nav {
+  /* the first parameter in translate is the X value so we don`t necesarilly need to put translateX(200),it does the X axis by default */
+  /* the bellow code sets the width of the nav */
+  transform: translate(200px);
+}
 nav {
   /* position it fixed with the help of position:fixed */
   /* make sure it`s always on top using z-index:100 */
@@ -27,7 +34,7 @@ nav {
   top: 0;
   left: 0;
   width: 200px;
-  height: 100vh;
+  height: 100%;
   z-index: 100;
   transform: translateX(-100%);
 }
@@ -79,7 +86,7 @@ h1 {
 }
 
 p {
-  margin: 30px, 0;
+  margin: 30px 0;
 }
 
 button,
@@ -131,8 +138,15 @@ button:focus {
   bottom: 0;
 }
 
+.modal-container.show-modal {
+  /* set up the display from none(above) to display:block (here) */
+  /* to have the modal fade in we need to add animation on the modal class(bellow) */
+  display: block;
+}
+
 .modal {
   /* to put the modal class div in the center of the page I use everything from the position:absolute to transform:translate(x-50%, y-50%) */
+  /* create a key frame for the modalopen animation */
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -140,9 +154,11 @@ button:focus {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate (-50%, -50%);
   max-width: 100%;
   width: 400px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration); 
 }
 
 .modal-header {
@@ -181,3 +197,14 @@ button:focus {
   top: 6px;
   right: 0;
 }
+
+  @keyframes modalopen {
+  /* goes from invisible (0) to fully visible(1) slowly,in 1 sec */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}  
