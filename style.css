@@ -2,7 +2,7 @@
 
 /* Css varibles */
 :root {
-  --modal-duration: 1s;
+  --modal-duration: 2s;
   --primary-color: #30336b;
   --secondary-color: #be2edd;
 }
@@ -153,7 +153,7 @@ button:focus {
   overflow: hidden;
   position: absolute;
   top: 30%;
-  left: 35%;
+  left: 37%;
   transform: translate (-50%, -50%);
   max-width: 100%;
   width: 400px;
